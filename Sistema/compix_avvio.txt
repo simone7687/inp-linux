@@ -1,0 +1,6 @@
+nel prossimone testo sostituire:
+	<value type="string" value="xfwm4"/>
+con:
+	<value type="string" value="compiz"/>
+
+se hai capito: CTRL+X
