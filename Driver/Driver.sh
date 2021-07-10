@@ -1,15 +1,15 @@
-verita=0
-domanda()
+value_question=0
+function_question()
 {
-    verita=8    # a caso
+    value_question=8    # a caso
     echo Continuare? [Si:1/No:0]
-    read verita
-    if (( verita == 1 )) ; then
-        verita=1
-    elif (( verita == 0 )) ; then
-        verita=0
+    read value_question
+    if (( value_question == 1 )) ; then
+        value_question=1
+    elif (( value_question == 0 )) ; then
+        value_question=0
     else
-        domanda
+        function_question
     fi
 }
 
@@ -20,10 +20,10 @@ echo Internet
 echo --------
 echo 
 # https://github.com/tomaspinho/rtl8821ce
-echo Installare rtl8821ce?
+echo Vuoi installare rtl8821ce?
 rtl8821ce=0
-domanda
-if (( verita == 1 )) ; then
+function_question
+if (( value_question == 1 )) ; then
     rtl8821ce=1
     sudo apt install linux-headers-$(uname -r) build-essential dkms -y
     unzip rtl8821ce-master.zip
@@ -34,14 +34,14 @@ if (( verita == 1 )) ; then
 fi
 
 #   fine
-echo dispense dei pacchetti
+echo --- Dispense dei pacchetti ---
 sudo apt --fix-broken install -y
 
 if (( rtl8821ce == 1 )) ; then
     chmod +x rtl8821ce.sh
     ./rtl8821ce.sh
 fi
-echo dispense dei pacchetti
+echo --- Dispense dei pacchetti ---
 sudo apt --fix-broken install
 
 sudo apt-get update

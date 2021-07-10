@@ -1,15 +1,15 @@
-verita=0
-domanda()
+value_question=0
+function_question()
 {
-    verita=8    # a caso
+    value_question=8    # a caso
     echo Continuare? [Si:1/No:0]
-    read verita
-    if (( verita == 1 )) ; then
-        verita=1
-    elif (( verita == 0 )) ; then
-        verita=0
+    read value_question
+    if (( value_question == 1 )) ; then
+        value_question=1
+    elif (( value_question == 0 )) ; then
+        value_question=0
     else
-        domanda
+        function_question
     fi
 }
 
@@ -18,10 +18,10 @@ echo -----------------
 echo Personalizzazione
 echo -----------------
 echo 
-echo Installare plank?
+echo Vuoi installare plank?
 plank=0
-domanda
-if (( verita == 1 )) ; then
+function_question
+if (( value_question == 1 )) ; then
     plank=1
     echo plank --preferences
     sudo apt install plank -y
@@ -29,10 +29,10 @@ fi
 echo 
 echo https://wiki.ubuntu-it.org/AmbienteGrafico/Xfce/Compiz
 echo https://www.marcosbox.org/2015/03/usiamo-compiz-su-xubuntu.html
-echo Installare compiz?
+echo Vuoi installare compiz?
 compiz=0
-domanda
-if (( verita == 1 )) ; then
+function_question
+if (( value_question == 1 )) ; then
     compiz=1
     sudo apt-get install compizconfig-settings-manager compiz dconf-editor -y
 fi
@@ -41,9 +41,9 @@ echo -----
 echo Store
 echo -----
 echo 
-echo Installare synaptic?
-domanda
-if (( verita == 1 )) ; then
+echo Vuoi installare synaptic?
+function_question
+if (( value_question == 1 )) ; then
     sudo apt-get install synaptic -y
 fi
 echo 
@@ -51,58 +51,58 @@ echo -------
 echo Windows
 echo -------
 echo 
-echo Installare wine?
+echo Vuoi installare wine?
 wine=0
-domanda
-    if (( verita == 1 )) ; then
+function_question
+    if (( value_question == 1 )) ; then
     wine=1
     sudo apt-get install wine -y
     #sudo snap install wine-platform
 fi
 echo 
-echo Installare Creatore usb-avviabili?
-domanda
-if (( verita == 1 )) ; then
+echo Vuoi installare Creatore usb-avviabili?
+function_question
+if (( value_question == 1 )) ; then
     sudo apt-get install usb-creator-common -y
 fi
 echo 
-echo Installare 7zip?
-domanda
-if (( verita == 1 )) ; then
+echo Vuoi installare 7zip?
+function_question
+if (( value_question == 1 )) ; then
     sudo apt-get install p7zip-rar -y
     #sudo snap install p7zip-desktop
 fi
 echo 
-echo Installare Protezione occhi?
+echo Vuoi installare Protezione occhi?
 redshift=0
-domanda
-if (( verita == 1 )) ; then
+function_question
+if (( value_question == 1 )) ; then
     redshift=1
     sudo apt-get install redshift -y
 fi
 echo 
-echo Installare Gestore Partizioni?
-domanda
-if (( verita == 1 )) ; then
+echo Vuoi installare Gestore Partizioni?
+function_question
+if (( value_question == 1 )) ; then
     sudo apt-get install gparted -y
 fi
 echo 
-echo Installare Gestore Grub?
-domanda
-if (( verita == 1 )) ; then
+echo Vuoi installare Gestore Grub?
+function_question
+if (( value_question == 1 )) ; then
     sudo apt install grub-customizer -y
 fi
 echo 
 echo Sostituire Monitor di sistema con quello di gnome?
-domanda
-if (( verita == 1 )) ; then
+function_question
+if (( value_question == 1 )) ; then
     sudo apt-get remove xfce4-taskmanager -y
     sudo apt-get remove gnome-system-monitor -y
     sudo snap install gnome-system-monitor
 fi
 
 #   (fine)
-echo dispense dei pacchetti
+echo --- Dispense dei pacchetti ---
 sudo apt --fix-broken install -y
 sudo apt autoremove -y
 
