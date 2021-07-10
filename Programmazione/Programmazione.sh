@@ -45,6 +45,18 @@ if (( value_question == 1 )) ; then
     sudo dpkg -i smartgit.deb
 fi
 echo 
+echo Vuoi installare FastBoot?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install fastboot -y
+fi
+echo 
+echo Vuoi installare ADB?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install adb -y
+fi
+echo 
 echo ----------
 echo -- Java --
 echo ----------
