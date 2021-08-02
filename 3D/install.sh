@@ -31,6 +31,22 @@ function_question
 if (( value_question == 1 )) ; then
     sudo snap install audacity --classic
 fi
+echo -----------
+echo -- Unity --
+echo -----------
+echo Vuoi installare Unity?
+function_question
+if (( value_question == 1 )) ; then
+    chmod a+x UnityHub.AppImage
+    ./UnityHub.AppImage
+fi
+echo 
+echo Vuoi installare ....?
+function_question
+if (( value_question == 1 )) ; then
+    #sudo snap install postman
+fi
+echo
 
 #   (fine)
 echo --- Dispense dei pacchetti ---
