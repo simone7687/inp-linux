@@ -46,6 +46,16 @@ if (( value_question == 1 )) ; then
     cd Programmazione/   &&   chmod +x Programmazione.sh   &&   ./Programmazione.sh   &&   cd ..
 fi
 echo 
+echo --------------------------------------------
+echo --------------------------------------------
+echo ------ Installare Programmi di Media? ------
+echo --------------------------------------------
+echo --------------------------------------------
+function_question
+if (( value_question == 1 )) ; then
+    cd Media/   &&   chmod +x Media.sh   &&   ./Media.sh   &&   cd ..
+fi
+echo 
 echo ----------------------------------------------
 echo ----------------------------------------------
 echo ------ Installare Programmi di Sistema? ------

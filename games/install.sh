@@ -13,28 +13,13 @@ function_question()
     fi
 }
 
-# echo Vuoi installare Lutris?
-# function_question
-# if (( value_question == 1 )) ; then
-#     sudo add-apt-repository ppa:lutris-team/lutris -y
-#     sudo apt-get update
-#     sudo apt-get install lutris -y
-#     #sudo snap install lutris-mts --edge --devmode
-# fi
-# echo 
 echo Vuoi installare Steam?
 function_question
 if (( value_question == 1 )) ; then
     sudo apt install steam-installer -y
 fi
 echo 
-# echo Vuoi installare Vulkan?
-# function_question
-# if (( value_question == 1 )) ; then
-#     echo https://linuxconfig.org/install-and-test-vulkan-on-linux
-#     sudo apt install vulkan-utils -y
-# fi
-# echo 
+
 echo Rimuovere giochi di sistema?
 function_question
 if (( value_question == 1 )) ; then

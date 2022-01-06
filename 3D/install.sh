@@ -31,6 +31,12 @@ function_question
 if (( value_question == 1 )) ; then
     sudo snap install audacity --classic
 fi
+echo 
+echo Vuoi installare Poedit
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install poedit
+fi
 echo -----------
 echo -- Unity --
 echo -----------
