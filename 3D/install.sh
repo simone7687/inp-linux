@@ -41,10 +41,11 @@ if (( value_question == 1 )) ; then
     ./UnityHub.AppImage
 fi
 echo 
-echo Vuoi installare ....?
+echo Vuoi installare Tiled?
 function_question
 if (( value_question == 1 )) ; then
-    #sudo snap install postman
+    chmod a+x Tiled.AppImage
+    ./Tiled.AppImage
 fi
 echo
 

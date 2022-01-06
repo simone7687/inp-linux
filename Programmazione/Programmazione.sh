@@ -45,6 +45,39 @@ if (( value_question == 1 )) ; then
     sudo dpkg -i smartgit.deb
 fi
 echo 
+echo ----------
+echo -- Java --
+echo ----------
+echo Vuoi installare Java 11?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install openjdk-11-jdk -y
+fi
+echo 
+echo -------
+echo -- C --
+echo -------
+echo Vuoi installare gcc?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install gcc -y
+fi
+echo 
+echo Vuoi installare make?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install make -y
+fi
+echo 
+echo -------------
+echo -- Android --
+echo -------------
+echo Vuoi installare Android Studio?
+function_question
+if (( value_question == 1 )) ; then
+    sudo snap install android-studio --classic
+fi
+echo
 echo Vuoi installare FastBoot?
 function_question
 if (( value_question == 1 )) ; then
@@ -57,24 +90,6 @@ if (( value_question == 1 )) ; then
     sudo apt install adb -y
 fi
 echo 
-echo ----------
-echo -- Java --
-echo ----------
-echo Vuoi installare Java 11?
-function_question
-if (( value_question == 1 )) ; then
-    sudo apt install openjdk-11-jdk -y
-fi
-echo 
-echo -------------
-echo -- Android --
-echo -------------
-echo Vuoi installare Android Studio?
-function_question
-if (( value_question == 1 )) ; then
-    sudo snap install android-studio --classic
-fi
-echo
 echo --------------
 echo -- DataBase --
 echo --------------
