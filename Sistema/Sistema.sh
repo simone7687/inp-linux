@@ -93,6 +93,12 @@ if (( value_question == 1 )) ; then
     sudo apt install grub-customizer -y
 fi
 echo 
+echo Vuoi installare XnConvert
+function_question
+if (( value_question == 1 )) ; then
+    sudo dpkg -i XnConvert.deb
+fi
+echo 
 echo Sostituire Monitor di sistema con quello di gnome?
 function_question
 if (( value_question == 1 )) ; then
