@@ -97,3 +97,5 @@ sudo apt-get upgrade -y
 sudo apt autoremove -y
 sudo dpkg --configure -a
 sudo apt --fix-broken install
+# aggionamento sistema opertivo
+sudo do-release-upgrade

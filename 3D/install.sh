@@ -19,13 +19,6 @@ if (( value_question == 1 )) ; then
     sudo snap install blender --classic
 fi
 echo 
-echo Vuoi installare Renpy
-function_question
-if (( value_question == 1 )) ; then
-    sudo apt install python -y
-    sudo apt-get install renpy -y
-fi
-echo 
 echo Vuoi installare Audacity
 function_question
 if (( value_question == 1 )) ; then
