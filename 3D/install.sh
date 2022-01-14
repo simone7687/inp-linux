@@ -28,7 +28,7 @@ echo
 echo Vuoi installare Poedit
 function_question
 if (( value_question == 1 )) ; then
-    sudo apt install poedit
+    sudo snap install poedit --classic
 fi
 echo -----------
 echo -- Unity --
