@@ -27,6 +27,13 @@ if (( value_question == 1 )) ; then
     sudo apt install plank -y
 fi
 echo 
+echo Vuoi installare xfce?
+function_question
+if (( value_question == 1 )) ; then
+    sudo apt install xfce4 -y
+    sudo apt install xfce4-whiskermenu-plugin -y
+fi
+echo 
 echo https://wiki.ubuntu-it.org/AmbienteGrafico/Xfce/Compiz
 echo https://www.marcosbox.org/2015/03/usiamo-compiz-su-xubuntu.html
 echo Vuoi installare compiz?
@@ -57,7 +64,7 @@ function_question
     if (( value_question == 1 )) ; then
     wine=1
     sudo apt-get install wine -y
-    #sudo snap install wine-platform
+    sudo apt-get install winetrickss -y
 fi
 echo 
 echo Vuoi installare Creatore usb-avviabili?
@@ -70,7 +77,7 @@ echo Vuoi installare 7zip?
 function_question
 if (( value_question == 1 )) ; then
     sudo apt-get install p7zip-rar -y
-    #sudo snap install p7zip-desktop
+    sudo wine64 uninstaller -y
 fi
 echo 
 echo Vuoi installare Protezione occhi?
