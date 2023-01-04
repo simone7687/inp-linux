@@ -21,7 +21,7 @@ function_question()
 #     sudo apt-get install uget-integrator -y
 #     #sudo snap install --edge uget
 # fi
-echo 
+echo https://www.microsoftedgeinsider.com/it-it/download
 echo Vuoi installare VPN Windscribe?
 function_question
 if (( value_question == 1 )) ; then
@@ -47,15 +47,11 @@ if (( value_question == 1 )) ; then
     sudo dpkg -i TeamViewer.deb
 fi
 echo 
-echo Vuoi installare Edge?
+echo Vuoi installare Edge Beta?
+echo 
 function_question
 if (( value_question == 1 )) ; then
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-    sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list'
-    sudo rm microsoft.gpg
-
-    sudo apt update -y && sudo apt install microsoft-edge-stable -y
+    sudo dpkg -i microsoft-edge-beta_109.0.1518.26-1_amd64.deb
 fi
 echo 
 echo Vuoi installare Mega?

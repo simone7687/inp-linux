@@ -30,11 +30,11 @@ echo ---------
 echo -- Git --
 echo ---------
 echo https://github.com/shiftkey/desktop/releases
-echo Vuoi installare GitHub?
+echo Vuoi installare GitHub v3.1.1?
 function_question
 if (( value_question == 1 )) ; then
     sudo apt-get install git git-man -y
-    sudo dpkg -i GitHubDesktop.deb
+    sudo dpkg -i GitHubDesktop-linux-3.1.1-linux1.deb
     # sudo snap install github-desktop --beta --classic
 fi
 echo 
