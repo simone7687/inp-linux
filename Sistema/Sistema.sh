@@ -76,8 +76,7 @@ echo
 echo Vuoi installare 7zip?
 function_question
 if (( value_question == 1 )) ; then
-    sudo apt-get install p7zip-rar -y
-    sudo wine64 uninstaller -y
+    sudo apt-get install p7zip-full -y
 fi
 echo 
 echo Vuoi installare Protezione occhi?
@@ -101,9 +100,10 @@ if (( value_question == 1 )) ; then
 fi
 echo 
 echo Vuoi installare XnConvert
+echo https://www.xnview.com/en/xnconvert/
 function_question
 if (( value_question == 1 )) ; then
-    sudo dpkg -i XnConvert.deb
+    sudo dpkg -i XnConvert-linux-x64.deb
 fi
 echo 
 echo Sostituire Monitor di sistema con quello di gnome?
