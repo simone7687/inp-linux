@@ -42,29 +42,31 @@ if (( value_question == 1 )) ; then
 fi
 echo 
 echo Vuoi installare TeamViewer?
+echo https://www.teamviewer.com/it/download/linux/
 function_question
 if (( value_question == 1 )) ; then
-    sudo dpkg -i TeamViewer.deb
+    sudo dpkg -i teamviewer_15.37.3_amd64.deb
 fi
 echo 
 echo Vuoi installare Edge Beta?
-echo 
+echo https://www.microsoftedgeinsider.com/en-us/download
 function_question
 if (( value_question == 1 )) ; then
     sudo dpkg -i microsoft-edge-beta_109.0.1518.26-1_amd64.deb
 fi
 echo 
 echo Vuoi installare Mega?
+echo https://mega.io/desktop
 function_question
 if (( value_question == 1 )) ; then
-    sudo dpkg -i Mega.deb
+    sudo dpkg -i megasync-xUbuntu_22.10_amd64.deb
 fi
 echo 
 echo Vuoi installare FreeDownloadManager?
+echo https://www.freedownloadmanager.org/download-fdm-for-linux.htm
 function_question
 if (( value_question == 1 )) ; then
     sudo dpkg -i freedownloadmanager.deb
-    cd FreeDownloadManager/   &&   chmod +x install.sh   &&   ./install.sh   &&   cd ..
 fi
 echo 
 echo ------------
